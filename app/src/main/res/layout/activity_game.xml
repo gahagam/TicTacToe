@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    tools:context=".GameActivity" >
+
+
+
+    <ImageView
+        android:id="@+id/toClose"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/style_menu_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cross"
+        app:tint="#FFF" />
+
+    <ImageView
+        android:id="@+id/toPopMenu"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/style_menu_button"
+        android:backgroundTint="@color/blue"
+        android:padding="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_menu"
+        app:tint="#FFF" />
+
+    <Chronometer
+        android:id="@+id/Chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/black"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toClose"
+        app:layout_constraintEnd_toStartOf="@+id/toPopMenu"
+        app:layout_constraintStart_toEndOf="@+id/toClose"
+        app:layout_constraintTop_toTopOf="@+id/toClose" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pole"
+        android:layout_width="378dp"
+        android:layout_height="390dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/style_gamefield"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toClose"
+        app:layout_constraintVertical_bias="0.457">
+
+        <ImageView
+            android:id="@+id/cell_11"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/cell_21"
+            app:layout_constraintEnd_toStartOf="@+id/cell_12"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/cross" />
+
+        <ImageView
+            android:id="@+id/cell_12"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/cell_22"
+            app:layout_constraintEnd_toStartOf="@+id/cell_13"
+            app:layout_constraintStart_toEndOf="@+id/cell_11"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/cross" />
+
+        <ImageView
+            android:id="@+id/cell_13"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/cell_23"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cell_12"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/cross" />
+
+        <ImageView
+            android:id="@+id/cell_21"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/cell_31"
+            app:layout_constraintEnd_toStartOf="@+id/cell_22"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cell_11"
+            tools:srcCompat="@drawable/cross" />
+
+        <ImageView
+            android:id="@+id/cell_23"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/cell_33"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cell_22"
+            app:layout_constraintTop_toBottomOf="@+id/cell_13"
+            tools:srcCompat="@drawable/cross" />
+
+        <ImageView
+            android:id="@+id/cell_22"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/cell_32"
+            app:layout_constraintEnd_toStartOf="@+id/cell_23"
+            app:layout_constraintStart_toEndOf="@+id/cell_21"
+            app:layout_constraintTop_toBottomOf="@+id/cell_12"
+            tools:srcCompat="@drawable/cross" />
+
+        <ImageView
+            android:id="@+id/cell_31"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cell_32"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cell_21"
+            tools:srcCompat="@drawable/cross" />
+
+        <ImageView
+            android:id="@+id/cell_32"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cell_33"
+            app:layout_constraintStart_toEndOf="@+id/cell_31"
+            app:layout_constraintTop_toBottomOf="@+id/cell_22"
+            tools:srcCompat="@drawable/cross" />
+
+        <ImageView
+            android:id="@+id/cell_33"
+            android:layout_width="112dp"
+            android:layout_height="112dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/cell_32"
+            app:layout_constraintTop_toBottomOf="@+id/cell_23"
+            tools:srcCompat="@drawable/cross" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
